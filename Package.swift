@@ -37,8 +37,8 @@ let package = Package(
         .target(name: "CgRPC",
                 dependencies: ["BoringSSL"],
                 cSettings: [
-                    .headerSearchPath("../BoringSSL/include"),
-                    .unsafeFlags(["-Wno-module-import-in-extern-c"])],
+                    .headerSearchPath("../BoringSSL/include")
+                ],
                 linkerSettings: [.linkedLibrary("z")]),
         .target(name: "RootsEncoder"),
         .target(name: "protoc-gen-swiftgrpc",
